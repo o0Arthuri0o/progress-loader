@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./App.js" ></script>
+    <script defer src="./progress-loader.js" ></script>
+    <title>Loader</title>
+</head>
+<body>
+    
+    <div class="progress_container" >
+        <progress-loader 
+            value="" 
+            animate="false" 
+            hide="false"
+            stroke-width="25"
+            progress-color=""
+            trail-color=""
+            bg-color=""
+         ></progress-loader>
+    </div>
+
+    <div class="controls" >
+        
+        <label class="controls_value remove-number " for="controls_value" >
+            <input type="number" min="1" max="100" class="controls_value__input" id="controls_value" >
+            <span>
+                Value
+            </span>
+        </label>
+
+        <label class="checkbox" for="checkbox_animate">
+            <input class="checkbox__inp" type="checkbox" id="checkbox_animate">
+            <span class="checkbox__inner">
+                Animate
+            </span>
+        </label>
+
+        <label class="checkbox" for="checkbox_hide">
+            <input class="checkbox__inp" type="checkbox" id="checkbox_hide">
+            <span class="checkbox__inner">
+                Hide
+            </span>
+        </label>
+
+    </div>
+
+</body>
+</html>

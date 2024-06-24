@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "GT Eesti"; 
+    src: url("./public/gteestiprodisplay_regular.otf") format("otf"); 
+    src: url("./public/gteestiprodisplay_regular.woff") format("woff"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GT Eesti"; 
+    --color-blue:  #005cff;
+    --color-grey: #eaf0f6;  
+}
+body {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 250px auto;
+    justify-content: center;
+    gap: 70px;
+}
+
+.progress_container{
+    align-self: end;
+    justify-self: center;
+    max-width: 200px;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: flex-start;
+    gap: 12px;
+}
+
+
+/* инпут value */
+.controls_value{
+    display: flex;
+    align-items: center;
+}
+.controls_value span{
+    margin-left: 14px;
+    font-size: 18px;
+}
+.controls_value__input{
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 16px;
+    appearance: none;
+    outline: none;
+    padding-top: 2px;
+}
+
+
+/* чекбокс */
+
+.checkbox {
+    display: inline-block;
+}
+
+.checkbox__inp {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+
+.checkbox__inner {
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    padding: 8px;
+    padding-left: 74px;
+}
+
+.checkbox__inner:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: var(--color-grey);
+    transition: background-color .3s;
+}
+
+.checkbox__inner::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+    left: 3px;
+    top: 3px;
+    transition: background-color .3s, left .3s;
+}
+
+.checkbox__inp:checked+.checkbox__inner::before {
+    background-color: var(--color-blue);
+}
+
+.checkbox__inp:checked+.checkbox__inner::after {
+    background-color: white;
+    left: 27px;
+}
+
+/* .checkbox__inp:focus+.checkbox__inner:before {
+    outline: 1px solid gray;
+    outline-offset: 3px;
+} */
+
+@media (min-width:568px) {
+    body{
+     grid-template-columns: 250px 250px;
+     grid-template-rows: auto;
+    }
+    .progress_container{
+         align-self: center;
+     }
+    .controls{
+        align-self: center;
+        /* justify-self:; */
+    }
+ 
+ }
+
+.remove-number{ 
+    /* Для Chrome, Safari, Edge, Opera */ 
+    input[type=number]::-webkit-outer-spin-button, 
+    input[type=number]::-webkit-inner-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    } 
+
+    /* Для Firefox */ 
+    input[type=number] { 
+        -moz-appearance: textfield; 
+    } 
+}
