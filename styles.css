@@ -116,10 +116,7 @@ body {
     left: 27px;
 }
 
-/* .checkbox__inp:focus+.checkbox__inner:before {
-    outline: 1px solid gray;
-    outline-offset: 3px;
-} */
+
 
 @media (min-width:568px) {
     body{
@@ -131,7 +128,6 @@ body {
      }
     .controls{
         align-self: center;
-        /* justify-self:; */
     }
  
  }

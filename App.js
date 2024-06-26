@@ -3,11 +3,9 @@ const inputValue = document.querySelector('.controls_value__input')
 const checkboxAnimate = document.querySelector('#checkbox_animate')
 const checkboxHide = document.querySelector('#checkbox_hide')
 
-// console.log(checkboxHide, checkboxAnimate)
 
 const handleInputOnChange = (e) => {
     const value = e.target.value
-    // console.log(Number(value))
     updateLoader("value", value)
 }
 

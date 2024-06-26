@@ -1,21 +1,3 @@
-// const progressLoader = document.querySelector("#progress-loader")
-
-// let progressStartValue = 40,
-//     progressEndValue = 90,
-//     speed = 50;
-
-//     progressLoader.style.background = ` conic-gradient(#005cff, ${progressStartValue * 3.6}deg, #eaf0f6 0deg)`
-
-// let progress = setInterval(() => {
-//     progressStartValue++
-//     console.log(progressStartValue)
-//     progressLoader.style.background = ` conic-gradient(#005cff, ${progressStartValue * 3.6}deg, #eaf0f6 0deg)`
-//     if(progressStartValue === progressEndValue) {
-//         clearInterval(progress)
-//     }
-// }, speed)
-
-
 const ProgressLoaderTemplate = document.createElement("template")
 ProgressLoaderTemplate.innerHTML = `
     <style>
@@ -47,6 +29,7 @@ ProgressLoaderTemplate.innerHTML = `
             display:flex;
             justify-content:center;
             align-items:center;
+            animation-fill-mode: forwards;
 
             transition: --progress 0.5s linear;
         }
