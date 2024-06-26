@@ -6,7 +6,13 @@ const checkboxHide = document.querySelector('#checkbox_hide')
 
 const handleInputOnChange = (e) => {
     const value = e.target.value
-    updateLoader("value", value)
+    if(Number(value) >= 0 && Number(value) <= 100) {
+        inputValue.style.borderColor = "black"
+        updateLoader("value", value)
+    } else {
+        inputValue.style.borderColor = "#FF4040"
+    }
+
 }
 
 const hadleAnimate = (e) => {
@@ -23,7 +29,6 @@ const updateLoader = (type, value) => {
     switch(type){
         case "value":
             if(Number(value) >= 1 && Number(value) <= 100) {
-                console.log(Number(value))
                 loader.setAttribute("value", value)
             } else if(Number(value) === 0) loader.setAttribute("value", 0)
             break;
